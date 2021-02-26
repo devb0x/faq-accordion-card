@@ -17,4 +17,57 @@ body {
   min-height: 100vh;
 }
 
+.card {
+  max-width: 327px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 23px;
+  box-shadow: 0 50px 50px -20px rgba(53, 18, 122, 0.497159);
+}
+.card .card-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card .questions-wrapper {
+  padding: 48px 24px;
+}
+.card .questions-wrapper .panel {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid #e7e7e9;
+  line-height: 0.813rem;
+}
+.card .questions-wrapper .panel .active {
+  font-weight: 700;
+}
+.card .questions-wrapper .panel .heading {
+  cursor: pointer;
+  display: flex;
+  margin: 15px 0;
+  transition: 0.4s;
+}
+.card .questions-wrapper .panel .heading:hover {
+  color: #f47c57;
+}
+.card .questions-wrapper .panel .heading:after {
+  content: "";
+  background-image: url("./../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  height: 7px;
+  width: 10px;
+  margin: auto 0 auto auto;
+  transition: transform 0.3s ease-in-out;
+}
+.card .questions-wrapper .panel .active:after {
+  transform: rotateX(180deg);
+}
+.card .questions-wrapper .panel .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 /*# sourceMappingURL=style.css.map */
