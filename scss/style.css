@@ -17,52 +17,115 @@ body {
   min-height: 100vh;
 }
 
-.card-top__wrapper {
-  height: 180px;
-  width: 240px;
-  position: absolute;
-  top: -96px;
-  left: 10%;
+@media (max-width: 89.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
 }
 
-.card-img {
+.card {
+  max-width: 20.438rem;
+  margin: 20vh auto;
+  background-color: #ffffff;
+  border-radius: 1.438rem;
+  box-shadow: 0 3.125rem 3.125rem -1.25rem rgba(53, 18, 122, 0.497159);
   position: relative;
-  z-index: 10;
+}
+@media (min-width: 90em) {
+  .card {
+    min-width: 57.5rem;
+  }
+}
+.card .card-img__wrapper {
+  height: 11.25rem;
+  width: 15rem;
+  position: absolute;
+  top: -6rem;
+  left: 10%;
+}
+@media (min-width: 90em) {
+  .card .card-img__wrapper {
+    width: 29.5rem;
+    height: 22.438rem;
+    left: -7.188rem;
+    top: 4.375rem;
+  }
+}
+.card .card-img__wrapper .card-img__box {
+  z-index: 3;
+  background-image: url("./../images/illustration-box-desktop.svg");
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: absolute;
+  width: 5.625rem;
+  height: 6.75rem;
+  top: 6.563rem;
+  left: 4.438rem;
+}
+.card .card-img__wrapper .card-img {
+  z-index: 2;
+  position: relative;
   background-image: url("./../images/illustration-woman-online-mobile.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
 }
-
-.card-img__pattern {
-  position: relative;
+@media (min-width: 90em) {
+  .card .card-img__wrapper .card-img {
+    background-image: url("./../images/illustration-woman-online-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 17.313rem;
+    width: 63%;
+    left: 7.188rem;
+  }
+}
+.card .card-img__wrapper .card-img__pattern {
   z-index: 1;
+  position: relative;
   background-image: url("./../images/bg-pattern-mobile.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
   width: 90%;
-  top: -89px;
-  left: 24px;
+  top: -5.563rem;
+  left: 1.5rem;
 }
-
-.card {
-  max-width: 327px;
-  margin: 20vh auto;
-  background-color: #ffffff;
-  border-radius: 23px;
-  box-shadow: 0 50px 50px -20px rgba(53, 18, 122, 0.497159);
-  position: relative;
+@media (min-width: 90em) {
+  .card .card-img__wrapper .card-img__pattern {
+    background-image: url("./../images/bg-pattern-desktop.svg");
+    position: absolute;
+    width: 18.563rem;
+    height: 28.5rem;
+    left: 7.188rem;
+    top: -4.375rem;
+    background-position: bottom right;
+    background-size: 200%;
+  }
 }
 .card .card-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  padding-top: 119px;
+  padding-top: 7.438rem;
+}
+@media (min-width: 90em) {
+  .card .card-title {
+    padding-top: 3rem;
+  }
 }
 .card .questions-wrapper {
-  padding: 0 24px 48px 24px;
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+@media (min-width: 90em) {
+  .card .questions-wrapper {
+    width: 45%;
+    margin-left: 45%;
+    padding-left: 0.938rem;
+  }
 }
 .card .questions-wrapper .panel {
   display: flex;
@@ -72,13 +135,23 @@ body {
   border-bottom: 1px solid #e7e7e9;
   line-height: 0.813rem;
 }
+@media (min-width: 90em) {
+  .card .questions-wrapper .panel {
+    font-size: 0.875rem;
+  }
+}
 .card .questions-wrapper .panel .active {
   font-weight: 700;
+}
+@media (min-width: 90em) {
+  .card .questions-wrapper .panel .active {
+    text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  }
 }
 .card .questions-wrapper .panel .heading {
   cursor: pointer;
   display: flex;
-  margin: 15px 0;
+  margin: 0.938rem 0;
   transition: 0.4s;
 }
 .card .questions-wrapper .panel .heading:hover {
@@ -88,8 +161,8 @@ body {
   content: "";
   background-image: url("./../images/icon-arrow-down.svg");
   background-repeat: no-repeat;
-  height: 7px;
-  width: 10px;
+  height: 0.438rem;
+  width: 0.625rem;
   margin: auto 0 auto auto;
   transition: transform 0.3s ease-in-out;
 }
@@ -97,6 +170,7 @@ body {
   transform: rotateX(180deg);
 }
 .card .questions-wrapper .panel .content {
+  font-size: 0.75rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;

@@ -19,3 +19,9 @@ body {
   background: linear-gradient($softViolet, $softBlue) no-repeat;
   min-height: 100vh;
 }
+
+.hide-for-mobile {
+  @include breakpoint-down(desktop){
+    display: none;
+  }
+}
